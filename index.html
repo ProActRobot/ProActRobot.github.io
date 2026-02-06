@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"> 
+  
+  <meta property="og:title" content="ProAct: A Dual-System Framework for Proactive Embodied Social Agents"/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="google-site-verification" content="c-OO9s8QGRGOjdJTz3dyfcYlgskfbLXnwRRAzQLcoWw" />
+
+  <title>Proactive Social Robot</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="icon" href="static/figures/icon2.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body>
+
+<!-- paper -->
+<section class="publication-header">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- <div class="columns is-centered"> -->
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ProAct: A Dual-System Framework for Proactive Embodied Social Agents</h1>
+          <!-- <div class="is-size-3 publication-authors">
+            SIGGRAPH 2026
+          </div> -->
+          <!-- <div class="is-size-4 publication-authors">
+            <a href="https://blog.siggraph.org/2023/07/siggraph-2023-technical-papers-awards-best-papers-honorable-mentions-and-test-of-time.html/" target="_blank"> (Best Paper Honorable Mention)
+          </div> -->
+        </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- authors -->
+<section class="publication-author-block">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://lumen-ze.github.io" target="_blank">Zeyi Zhang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://usanococr.github.io/" target="_blank">Zixi Kang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://zrj24.github.io/" target="_blank">Ruijie Zhao</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://wangchek.github.io/" target="_blank">Yusen Feng</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.biaojiang.tech/" target="_blank">Biao Jiang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://libliu.info/" target="_blank">Libin Liu</a><sup>1✉</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Peking University, China<sup>1</sup>,</span> 
+            <span class="eql-cntrb">
+              <!--<small><br><sup>*</sup>indicates equal contribution</small>-->
+              <small><sup>✉</sup>corresponding author</small></span>
+          </div>
+          
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/????.?????" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+            
+              <span class="link-block">
+                <a href="https://github.com/LuMen-ze/Social_Robot" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code (TBD)</span>
+              </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=fYv43x27zjw"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+              <!-- </span> -->
+              <!-- Colab Link. -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/teaser.png" alt="cars peace"/>
+      </div>
+     
+      <h2 class="subtitle has-text-centered">
+        <span id="one-sentence"><b>ProAct</b> is a proactive, real-time framework for embodied agents that generates coherent verbal and nonverbal behaviors by unifying low-latency behavioral control with long-horizon social reasoning.</span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+            Embodied social agents have recently advanced in generating synchronized speech and gestures. However, most interactive systems remain fundamentally reactive, responding only to current sensory inputs within a short temporal window. Proactive social behavior, in contrast, requires deliberation over accumulated context and intent inference, which conflicts with the strict latency budget of real-time interaction.
+            <br>
+            <br>
+            We present <em>ProAct</em>, a dual-system framework that reconciles this time-scale conflict by decoupling a low-latency Behavioral System for streaming multimodal interaction from a slower Cognitive System which performs long-horizon social reasoning and produces high-level proactive intentions. To translate deliberative intentions into continuous non-verbal behaviors without disrupting fluency, we introduce a streaming flow-matching model conditioned on intentions via ControlNet. This mechanism supports asynchronous intention injection, enabling seamless transitions between reactive and proactive gestures within a single motion stream. The system is deployed on a physical humanoid robot.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<!-- overview -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <br>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dual-System Overview</h2>
+            <div class="column is-centered has-text-centered">
+              <img src="static/figures/dual.png" alt="System Overview" width="1000"/>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                ProAct incorporates two systems to reconcile low-latency
+                reactive control with longer-horizon deliberation: a fast
+                <b>Behavioral System</b> for streaming multimodal interaction, and a
+                <b>Cognitive System</b> for compressed-context reasoning and proactive planning.
+
+              </p>
+              <p>
+                The <b>Behavioral System</b> maintains the real-time interaction loop,
+            producing streaming verbal and non-verbal responses through a
+            cascaded architecture that connects a streaming omni-modal LLM
+            with a streaming motion generator. The two channels operate asynchronously: verbal responses follow a turn-based pattern, while motion generation runs continuously to maintain embodied presence throughout the interaction.
+            </p><p>
+            The <b>Cognitive System</b> provides slower, LLM-driven deliberative reasoning of the context in parallel with real-time interaction: it compresses accumulated history via a Context Encoder into a bounded memory and uses a Behavior Planner to assess motivation and plan actions. These components run continuous reasoning
+            cycles within a fixed time budget to keep inference timely and consistent.
+            <br>
+            </p>
+          </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+<!-- flow-matching -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Flow-Matching Based Motion Generator</h2>
+          <div class="column is-centered has-text-centered">
+            <img src="static/figures/mogen.png" alt="System Overview" width="350"/>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              We introduce a real-time motion synthesis framework that utilizes <b>Conditional Flow Matching (CFM)</b> to transform Gaussian noise into motion via a learned velocity field. This approach employs an optimal-transport path and a transformer-based backbone to model dyadic interactions, processing synchronized audio streams to generate both expressive speaker gestures and attentive listener behaviors. To ensure temporal continuity during streaming, an <b>overlap-and-cache scheme</b> is implemented, effectively eliminating boundary discontinuities between windows.
+              <br><br>
+              To incorporate high-level semantic intentions without degrading rhythmic synchronization, the model integrates a <b>disentangled ControlNet architecture</b> that decouples text-based control from the frozen, audio-driven base generator. This unified system enables seamless transitions between reactive and proactive behaviors while maintaining a generation speed faster than real-time playback.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Sample Results -->
+    <div class="has-text-centered" style="margin-bottom: 2.5rem;">
+      <h3 class="title is-4">Sample Results on Specific Tasks</h3>
+      <div class="custom-carousel" data-carousel>
+        <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <p class="carousel-caption">The agent proactively reminds user of item left behind after conversation.</p>
+            <video id="s1" controls width="700"><source src="static/demo/result_bag.mp4" type="video/mp4"></video>
+            
+          </div>
+          <div class="carousel-slide">
+            <p class="carousel-caption">The agent invites user to the poster and clarifies a misunderstanding.</p>
+            <video id="s2" controls width="700"><source src="static/demo/result_poster.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-slide">
+            <p class="carousel-caption">The agent uses stored memory to help user recall item location.</p>
+            <video id="s3" controls width="700"><source src="static/demo/result_find.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-slide">
+            <p class="carousel-caption">The agent tells a story and interrupts itself upon detecting user distraction.</p>
+            <video id="s4" controls width="700"><source src="static/demo/result_story.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#10094;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#10095;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- Comparison -->
+    <div class="has-text-centered" style="margin-bottom: 2.5rem;">
+      <h3 class="title is-4">Ablation on Cognitive System and Comparison of Different User Emotions</h3>
+      <div class="custom-carousel" data-carousel>
+        <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <p class="carousel-caption">Full System | User is stressed → Agent provides emotional comfort.</p>
+            <video id="l1" controls width="700"><source src="static/demo/comp_patpat_good.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-slide">
+            <p class="carousel-caption">Full System (Same Setting) | User is happy → Agent expresses congratulations.</p>
+            <video id="l2" controls width="700"><source src="static/demo/comp_patpat_happy.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-slide">
+            <p class="carousel-caption">w/o Cognitive System | User is stressed → Agent fails to provide timely comfort.</p>
+            <video id="l3" controls width="700"><source src="static/demo/comp_patpat_fastonly.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#10094;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#10095;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+    <!-- Ablation Study -->
+    <div class="has-text-centered" style="margin-bottom: 2.5rem;">
+      <h3 class="title is-4">Ablation of Motion Generation Methods</h3>
+      <div class="custom-carousel" data-carousel>
+        <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <p class="carousel-caption">ControlNet Training Scheme</p>
+            <video id="a1" controls width="700"><source src="static/demo/ablation_controlnet.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-slide">
+            <p class="carousel-caption">DDIM Baseline (high latency)</p>
+            <video id="a2" controls width="700"><source src="static/demo/ablation_ddim_200.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#10094;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#10095;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+
+  </div>
+</section> 
+
+<!-- agent intermediates -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Case Example Breakdown</h2>
+        <div class="content has-text-justified">
+          <p>
+            Demonstrations of <em>ProAct</em> intermediate outputs on the specific tasks are shown below to illustrate how the system generates proactive behaviors through the dual-system architecture. Case 3 further compares the system with the one without the Cognitive System to highlight the effectiveness of the dual-system design in generating timely and context-aware proactive behaviors.
+          </p>
+        </div>
+        <figure class="has-text-centered">
+          <img src="static/figures/case1.png" alt="Case 1" width="1000"/>
+        </figure>
+        <hr>
+        <figure class="has-text-centered">
+          <img src="static/figures/case2.png" alt="Case 2" width="1000"/>
+        </figure>
+        <hr>
+        <figure class="has-text-centered">
+          <img src="static/figures/case3.png" alt="Case 3" width="1000"/>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- bibtex info -->
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+<pre><code>
+@inproceedings{,
+  title={ProAct: A Dual-System Framework for Proactive Embodied Social Agents},
+  author={},
+  year = {2026}
+}
+</code></pre>
+    </div>
+</section>
+
+</body>
+
+
+<footer class="footer">
+ <!--  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+      href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+      <i class="fas fa-file-pdf"></i>
+    </a>
+    <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <i class="fab fa-github"></i>
+    </a>
+  </div> -->
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This website is licensed under a <a rel="license"
+          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>
+        Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+        href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+
+
+  <script type="text/javascript">
+    var sc_project=12351448; 
+    var sc_invisible=1; 
+    var sc_security="c676de4f"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/12351448/0/c676de4f/1/"
+    alt="Web Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
+</html>
