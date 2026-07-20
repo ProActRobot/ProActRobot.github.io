@@ -135,10 +135,9 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            Embodied social agents have recently advanced in generating synchronized speech and gestures. However, most interactive systems remain fundamentally reactive, responding only to current sensory inputs within a short temporal window. Proactive social behavior, in contrast, requires deliberation over accumulated context and intent inference, which conflicts with the strict latency budget of real-time interaction.
-            <br>
-            <br>
-            We present <em>ProAct</em>, a dual-system framework that reconciles this time-scale conflict by decoupling a low-latency Behavioral System for streaming multimodal interaction from a slower Cognitive System which performs long-horizon social reasoning and produces high-level proactive intentions. To translate deliberative intentions into continuous non-verbal behaviors without disrupting fluency, we introduce a streaming flow-matching model conditioned on intentions via ControlNet. This mechanism supports asynchronous intention injection, enabling seamless transitions between reactive and proactive gestures within a single motion stream. The system is deployed on a physical humanoid robot.
+            Real-time embodied social interaction places two equally demanding requirements on an agent: continuously generating fluent multimodal interaction behavior, and proactively reasoning over accumulated dialogue and visual context to decide when to take initiative. These requirements must both be satisfied under a strict latency budget, making them difficult to meet simultaneously.
+            <br><br>We present <b>ProAct</b>, a dual-system framework that manages these time-critical requirements by integrating a low-latency <b>Behavioral System</b> for streaming multimodal interaction with a slower <b>Cognitive System</b> that performs long-horizon social reasoning and produces high-level proactive intentions. The Cognitive System incorporates an efficient memory mechanism and a user-motivation prediction module to reason over accumulated dialogue and visual context and determine when proactive intervention is appropriate. The Behavioral System further includes an intention-conditioned streaming flow-matching motion generator with a disentangled ControlNet branch, which translates deliberative intentions into continuous non-verbal behavior without disrupting interaction fluency.
+            <br><br>We deploy ProAct on a physical humanoid robot and validate the framework through comprehensive experiments, including real-world user studies, motion-generation benchmarks, and evaluation on <b>ProActBench</b>, a new, targeted benchmark for evaluating proactive trigger detection and restraint in embodied interaction.
           </p>
         </div>
       </div>
@@ -247,19 +246,8 @@
     <!-- Long Memory -->
     <div class="has-text-centered" style="margin-bottom: 2.5rem;">
       <h3 class="title is-4">Memory Capabilities in Long Context</h3>
-      <div class="custom-carousel" data-carousel>
-        <div class="carousel-viewport">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <p class="carousel-caption">This scenario contains three individuals interacting with the agent.<br>The agent assists A with rehearsal, reminds of a left-behind item,helps B recall an item's location, and comforts C who is upset.</p>
-            <video id="s4" controls width="700"><source src="static/demo/result_long.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-        </div>
-        <button class="carousel-btn carousel-prev" aria-label="Previous">&#10094;</button>
-        <button class="carousel-btn carousel-next" aria-label="Next">&#10095;</button>
-        <div class="carousel-dots"></div>
-      </div>
+      <p class="carousel-caption">This scenario contains three individuals interacting with the agent.<br>The agent assists A with rehearsal, reminds of a left-behind item,helps B recall an item's location, and comforts C who is upset.</p>
+      <video id="s4" controls width="700"><source src="static/demo/result_long.mp4" type="video/mp4"></video>
     </div>
 
     <!-- Comparison -->
